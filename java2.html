@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        h1{
+            color: green;
+            font-size: 75px;
+        }
+        h2{
+            color: darkviolet;
+
+        }
+    </style>
 </head>
 <body>
-
+<h1>bảng tính số bình phương</h1>
+nhập số<input id="so">
+<button onclick="sobp()">kết quả</button><br>
+<h2>số mũ</h2>
+nhập số tự nhiện<input id="sotunhien">nhập số mũ<input id="somu">
+<button onclick="somu()">kết quả</button>
 </body>
+<script>
+
+    function sobp(){
+        let a = +document.getElementById("so").value;
+        let ketqua = a*a
+        alert('kết quả'+ketqua)
+    }
+    function somu(){
+        let a = +document.getElementById("sotunhien").value;
+        let n = +document.getElementById("somu").value;
+        let ketqua1 = a**n;
+        alert(ketqua1)
+    }
+</script>
 </html>
