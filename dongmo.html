@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            cursor: progress;
+            margin: 5px 5px;
+            font-size: 20px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            color: black;
+            border: none;
+            background-color: #663300;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-delay: 1.5s;
+            animation-timing-function: linear;
+            animation-duration: 6s;
+            position: relative;
+            animation-name: axample;
+
+        }
+        @keyframes axample {
+            0% {background-color: #000066;left: 0px;top: 0px}
+            50% {background-color: aqua;
+                left: 200px;
+                top: 0px;
+            }
+            50%{background-color: orangered;left:-200px;top:0px;}
+            75%{background-color: blueviolet;left: 200px;top: 0px;}
+            100%{background-color: violet;fade:0px; top: 0px;}
+        }
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+<img id="cua" src="image/anh cua dong 2.png" height="450" width="250"/><br>
+<button onclick="mo()" id="on">open</button>
+</div>
+
+
+</body>
+<script>
+    let dongmo = false;
+    let mocua = "image/anh cua mo 2.png";
+    let dongcua = "image/anh cua dong 2.png";
+    function mo() {
+        console.log('goi ham-->')
+        dongmo = !dongmo;
+        console.log('dongmo=',dongmo)
+        if(dongmo==true){
+            document.getElementById("cua").src=mocua;
+            document.getElementById("on").innerHTML="closed"
+        }else {
+            document.getElementById("cua").src=dongcua;
+            document.getElementById("on").innerHTML="open"
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>tính diện tích hình tròn </h1>
+đường kính hình tròn(d):<input type="text" id="d"><br>
+diện tích hình tròn (s):<input type="text" id="s"><br>
+bán kính hình tròn (r):<input type="text" id="r">
+<select>
+    <option value="1cm">cm</option>
+    <option value="10cm">dm</option>
+    <option value="100cm">m</option>
+</select>
+<br>
+hằng số tương đương(π)<input type="text" id="c++"><br>
+
+<button onclick="dientich()">kết quả</button>
+
+</body>
+<script>
+    function dientich(){
+        let d = +document.getElementById("d").value;
+        let s = +document.getElementById("s").value;
+        let r = +document.getElementById("r").value;
+        let π = +document.getElementById("c++").value;
+        let ketqua=π*r**2;
+        alert(ketqua)
+    }
+</script>
+</html>
